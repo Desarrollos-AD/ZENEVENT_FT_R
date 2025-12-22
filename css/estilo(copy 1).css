@@ -1,0 +1,796 @@
+/* DefiniciÃ³n de Variables CSS para colores */
+:root {
+    --color-blanco: #ffffff;
+    --color-verde: #24c15b;
+    --color-morado: #a881ec;
+    --color-rojo: #ff2d2d;
+    --color-azul: #a1d1f5;
+    --color-negro: #333333; /* Color comÃºn en textos */
+   --color-primary: #ff5722; /* Ejemplo */
+  --color-neutral-300: #f5f5f5;
+  --color-neutral-800: #333333;
+  --color-neutral-200: #cccccc;
+}
+
+
+
+body {
+    font-family: "Comfortaa", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    background-color: #fff;
+}
+
+/* Main Section */
+.main-section {
+    display: flex; /* Alinear elementos en horizontal */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: center; /* Espaciado entre elementos */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #000; /* Fondo negro para contraste */
+    color: #fff; /* Texto en blanco */
+    position: relative; /* Para posicionar el texto oculto */
+    overflow: hidden; /* Asegura que no haya desbordamientos */
+}
+
+.main-section .container {
+    display: flex; /* Distribuir elementos en horizontal */
+    flex-direction: row; /* Mantener horizontal en pantallas grandes */
+    justify-content: space-between; /* Separar texto e imagen */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    max-width: 1200px; /* Limitar ancho máximo */
+    padding: 0 20px; /* Margen interno */
+}
+
+.main-section .text-section {
+    flex: 1; /* Ocupa 50% del espacio disponible */
+    padding-right: 20px; /* Espaciado entre texto e imagen */
+}
+
+.main-section .image-section {
+    flex: 1; /* Ocupa 50% del espacio disponible */
+    display: flex; /* Asegurar alineación del contenido interno */
+    flex-direction: column; /* Elementos en columna dentro */
+    align-items: center; /* Centrar imagen horizontalmente */
+    position: relative; /* Para el texto oculto */
+}
+
+.main-section img {
+    max-width: 100%; /* Imagen totalmente responsiva */
+    height: auto; /* Mantener proporciones */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.main-section img:hover {
+    transform: scale(1.05); /* Efecto de hover */
+    opacity: 0.8;
+}
+
+/* Contenedor del texto oculto */
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Mostrar el texto oculto cuando el enlace es hovered */
+.image-link:hover .hidden-text {
+    display: block; /* Mostrar texto */
+    animation: fadeIn 0.5s ease; /* Animación de entrada */
+}
+
+/* Efecto de hover en la imagen dentro del enlace */
+.image-link:hover img {
+    opacity: 0.8; /* Suavizar la imagen cuando se pasa el cursor */
+}
+
+/* Secondary Section */
+.secondary-section {
+    width: 100vw; /* Asegurar que ocupe todo el ancho */
+    padding: 50px 20px; /* Espaciado interno */
+    background-color: #f5f5f5; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+.secondary-section .container {
+    max-width: 1200px; /* Limitar ancho máximo */
+    margin: 0 auto; /* Centrar contenido */
+}
+
+/* Adaptabilidad para dispositivos verticales */
+@media screen and (max-width: 767px) {
+    .main-section .container {
+        flex-direction: column; /* Elementos en columna */
+        text-align: center; /* Centrar texto */
+    }
+
+    .main-section .text-section {
+        padding-right: 0; /* Quitar espaciado lateral */
+        margin-bottom: 20px; /* Espaciado entre texto e imagen */
+    }
+
+    .main-section .image-section {
+        width: 100%; /* Imagen ocupa todo el ancho */
+    }
+}
+
+
+.image-plus {
+    text-align: center; /* Centrar la imagen dentro del contenedor */
+    margin: 0 auto; /* Asegura que el contenedor de la imagen esté centrado */
+    max-width: 100%; /* Ajusta el contenedor al ancho permitido */
+}
+
+.image-plus {
+    display: none; /* Ocultar por defecto todas las imágenes */
+}
+
+.image-plus.active {
+    display: block; /* Mostrar solo las imágenes activas */
+}
+
+.imagen-inicio {
+    max-width: 80%; /* Ajusta la imagen al 80% del ancho del contenedor padre */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 8px; /* Bordes redondeados para diseño más estilizado */
+    margin-bottom: 15px; /* Espaciado inferior con respecto al título */
+}
+
+h3.fw-semibold {
+    margin-bottom: 10px; /* Espaciado inferior al texto */
+    color: #868686; /* Mejor contraste de color */
+}
+
+h5 {
+    margin-bottom: 5px;
+    color: black;
+}
+
+.descripcion {
+    font-size: 0.9rem; /* Texto más pequeño para la descripción */
+    color: #666; /* Un tono más claro para complementar el diseño */
+    margin: 0 auto;
+    max-width: 90%; /* Limita el ancho del texto para una mejor legibilidad */
+}
+
+
+/* Contenedor del texto oculto 
+.hidden-text {
+    display: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+*/
+
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*        .main-section img.tilt-effect {
+            transform: none;
+        } */
+
+/*
+        .main-section img.rotate-effect {
+            /* Código oculto: activar si se necesita */
+/* transform: rotate(5deg);   */
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+.carousel-image:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.carousel-image:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.carousel-image:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    33%, 66% {
+        opacity: 1;
+    }
+}
+
+
+
+.nosotros-section img:hover {
+    opacity: 0.7;
+}
+
+.footer {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+}
+/*   menu customisable osmo  */
+
+/* ------- Osmo [https://osmo.supply/] ------- */
+/*  Osmo UI: https://slater.app/10324/23333.css 
+ */
+@font-face {
+   font-family: "Poppins", serif;
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  font-weight: 800;
+  font-style: normal;
+        font-display: swap;
+    
+}
+
+.osmo-ui {
+    z-index: 0;
+    pointer-events: none;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.nav-row {    justify-content: space-between;
+    align-items: center;     width: 100%;    display: flex; }
+
+.nav-logo-row {
+    pointer-events: auto;     justify-content: space-between;
+    align-items: center;    width: 13em;
+    display: flex; 
+}
+
+.nav-logo__wordmark {
+    width: 4em;
+}
+
+.nav-logo__icon {
+    width: fit-content; /* Ajusta el ancho automáticamente según el contenido */
+    height: fit-content; /* Ajusta la altura automáticamente según el contenido */
+    max-width: 50%; /* Evita que el logo exceda los límites del contenedor */
+    max-height: 70%; /* Evita que el logo sea más alto que el contenedor */
+}
+
+.nav-logo__icon {
+    display: flex; /* Asegura un comportamiento flexible */
+    justify-content: center; /* Centra horizontalmente el logo */
+    align-items: center; /* Centra verticalmente el logo */
+    overflow: visible; /* Asegura que el contenido no se recorte */
+}
+
+.container {
+    z-index: 1;
+    max-width: var(--size-container);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.container.is--full {
+    max-width: 100%;
+}
+
+.nav-row__right {
+    grid-column-gap: 0.625rem;
+    grid-row-gap: 0.625rem;
+    pointer-events: auto;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+.header {
+    z-index: 110;
+    padding-top: var(--gap);
+    position: fixed;
+    inset: 0% 0% auto;
+}
+
+.website-link {
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+}
+
+.website-link.is--alt {
+    grid-column-gap: 0.25em;
+    grid-row-gap: 0.25em;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.5em;
+    display: flex;
+}
+
+.inline-link__p {
+    margin-bottom: 0;
+}
+
+.body {
+    background-color: var(--color-neutral-300);
+    color: var(--color-negro);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1;
+}
+
+p {  margin: 1px; }
+
+.cloneable {
+    padding: var(--section-padding) var(--container-padding);
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    display: flex;
+    position: relative;
+    --menu-padding: 4em;
+}
+
+.nav {
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: fixed;
+    inset: 0%;
+}
+
+.overlay {
+    z-index: 0;
+    cursor: pointer;
+    background-color: #13131366;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0%;
+}
+
+.menu {
+    padding-bottom: var(--menu-padding);
+    grid-column-gap: 5em;
+    grid-row-gap: 5em;
+    padding-top: calc(3 * var(--menu-padding));
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 35em;
+    height: 100%;
+    margin-left: auto;
+    position: relative;
+    overflow: auto;
+}
+
+.menu-bg {
+    z-index: 0;
+    position: absolute;
+    inset: 0%;
+}
+
+.menu-inner {
+    z-index: 1;
+    grid-column-gap: 5em;
+    grid-row-gap: 5em;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: auto;
+}
+
+.bg-panel {
+    z-index: 0;
+    background-color: var(--color-neutral-300);
+    border-top-left-radius: 1.25em;
+    border-bottom-left-radius: 1.25em;
+    position: absolute;
+    inset: 0%;
+}
+
+.bg-panel.first {
+    background-color: var(--color-blanco);
+}
+
+.bg-panel.second {
+    background-color: var(--color-neutral-100);
+}
+
+.menu-list {
+    flex-flow: column;
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+}
+
+.menu-list-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-link-heading {
+    color: black;
+    text-shadow: 1px 1em 1px var(--color-blanco);
+}
+
+.menu-link {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    padding-left: var(--menu-padding);
+    grid-column-gap: 0.75em;
+    grid-row-gap: 0.75em;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+}
+
+.menu-link-heading {
+    z-index: 1;
+    text-transform: uppercase;
+    font-family:
+        PP Neue Corp Tight,
+        Arial,
+        sans-serif;
+    font-size: 2.77em;
+    font-weight: 700;
+    line-height: 0.75;
+    transition: transform 0.55s cubic-bezier(0.65, 0.05, 0, 1);
+    position: relative;
+}
+
+.eyebrow {
+    z-index: 1;
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    font-family:
+        RM Mono,
+        Arial,
+        sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+
+.menu-link-bg {
+    z-index: 0;
+    background-color: var(--color-negro);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.65, 0.05, 0, 1);
+    position: absolute;
+    inset: 0%;
+    transform: scale3d(1, 0, 1);
+}
+
+.menu-details {
+    padding-left: var(--menu-padding);
+    grid-column-gap: 1.25em;
+    grid-row-gap: 1.25em;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.p-small {
+    font-size: 0.875em;
+    font-family: Arial, Helvetica;
+}
+
+.socials-row {
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
+    flex-flow: row;
+    display: flex;
+}
+
+.p-large {
+    font-size: 0.92em;
+    font-family: Arial, Helvetica;
+}
+
+.text-link {
+    text-decoration: none;
+    position: relative;
+}
+
+.menu-button {
+    grid-column-gap: 0.625em;
+    grid-row-gap: 0.625em;
+    background-color: #0000;
+    justify-content: flex-end;
+    align-items: center;
+    margin: -1em;
+    padding: 1em;
+    display: flex;
+    border: none;
+}
+
+.menu-button-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.menu-button-text {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 1.125em;
+    display: flex;
+    overflow: hidden;
+}
+
+.icon-wrap {
+    transition: transform 0.4s cubic-bezier(0.65, 0.05, 0, 1);
+}
+
+@media (hover: hover) {
+    /* Menu toggle button*/
+    .menu-button:hover .icon-wrap {
+        transform: rotate(90deg);
+    }
+
+    /* Menu Large Links */
+    .menu-link:hover .menu-link-heading {
+        transform: translate(1px, -1em);
+        transition-delay: 0.1s;
+    }
+    .menu-link:hover .menu-link-bg {
+        transform: scale(1, 1);
+    }
+
+    /* Menu Smaller Links */
+    .text-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--color-primary);
+        transform-origin: right center;
+        transform: scale(0, 1);
+        transition: transform 0.4s var(--cubic-default);
+    }
+
+    .text-link:hover::after {
+        transform-origin: left center;
+        transform: scale(1, 1);
+    }
+}
+
+.osmo-icon-svg {
+    width: 8em;
+}
+
+@media screen and (max-width: 767px) {
+    .cloneable {
+        --menu-padding: 1em;
+    }
+
+    .nav-logo-row {
+        grid-column-gap: 2.5em;
+        grid-row-gap: 2.5em;
+        width: auto;
+    }
+
+    .nav-row__right {
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
+
+    .cloneable-title {
+        pointer-events: none;
+        width: calc(100% - 5.25em);
+        padding-left: 1em;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .cloneable-title__nr,
+    .cloneable-title__h1 {
+        font-size: 0.875em;
+    }
+
+    .clone-in-webflow {
+        justify-content: flex-end;
+        width: 100%;
+        margin-right: 0;
+        padding-left: 0.75em;
+    }
+
+    .clone-in-webflow__p {
+        display: none;
+    }
+
+    .cloneable-title__gradient,
+    .osmo-ui__bg {
+        display: block;
+    }
+
+    .menu {
+        padding-top: calc(6 * var(--menu-padding));
+        width: 100%;
+    }
+
+    .bg-panel {
+        border-top-left-radius: 5;
+        border-bottom-left-radius: 5;
+    }
+
+    .menu-list-item {
+        height: 4.5em;
+    }
+
+    .menu-link-heading 
+      {
+        font-size: 4em;
+    }
+
+    .socials-row {
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+
+    .p-large.text-link {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .menu {
+        padding-top: calc(7 * var(--menu-padding));
+        padding-bottom: calc(2 * var(--menu-padding));
+    }
+}
+
+
+
+
+/* Contenedor del PDF */
+.pdf-container {
+    position: relative;
+    width: 100%; /* Ocupa todo el ancho */
+    height: calc(100vh - 120px); /* Ajusta la altura según la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+/* Estilo del iframe del PDF */
+.pdf-container .pdf-frame {
+    width: 80%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
+    border: none; /* Sin bordes */
+}
+
+/* Estilo del botón */
+.open-pdf-fullscreen {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--color-verde); /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Asegura que el botón esté por encima del iframe */
+}
+
+.open-pdf-fullscreen:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .pdf-container {
+        height: calc(100vh - 80px); /* Ajusta la altura */
+    }
+
+    .pdf-container .pdf-frame {
+        width: 85%; /* Ocupa todo el ancho */
+        height: calc(100vh - 80px); /* Ajusta la altura */
+    }
+
+    .open-pdf-fullscreen {
+        bottom: 10px; /* Ajusta la posición */
+        right: 10px;
+        font-size: 12px; /* Reduce el tamaño del botón */
+    }
+}
+
+ .text-section {
+        margin-top: 30px; /* Espaciado superior más generoso en móviles */
+    }
+
+@media (max-width: 480px) {
+    .pdf-container {
+        height: calc(100vh - 60px); /* Más ajuste en dispositivos móviles */
+    }
+}
+ .text-section {
+        margin-top: 50px; /* Espaciado superior más generoso en móviles */
+    }
+
+
+
+.terminos-contenedor {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    text-align: justify;
+}
+
+
+
+
+
+/* Estilo del botón de desplazamiento */
+.scroll-to-catalog {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-verde); /* Azul */
+    color: #fff; /* Texto blanco */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-catalog:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
