@@ -1,0 +1,80 @@
+@use "../../styles/base/variables" as v;
+@use "../../styles/abstracts/mixins" as mx;
+
+.separador {
+    background-image: url("../../assets/img/img9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+}
+
+.contenido {
+    padding: 5rem 0;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    position: relative;
+
+    &__right,
+    &__left {
+        flex: 1;
+    }
+
+    &__right {
+       @include mx.grid(2, 1rem);
+        align-items: center;
+        justify-content: center;
+
+        &--card {
+            padding: 3rem;
+            width: 100%;
+            border-radius: 1.5rem;
+            border-width: 1px;
+            border-color: rgb(255 255 255 / 0.1);
+            background-color: hsla(272, 19%, 16%, 0.856);
+            margin: 0 auto;
+            transition: 0.30s ease-in-out;
+            border: 1px solid rgb(59, 59, 59);
+            height: 16rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .icono {
+                color: v.$terciario;
+                background-color: #ee2b8c25;
+                border-radius: 50%;
+                height: 5rem;
+                width: 5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    &__left {
+        h3 {
+            text-align: left;
+        }
+    }
+}
