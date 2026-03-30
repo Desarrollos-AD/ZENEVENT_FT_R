@@ -8,8 +8,9 @@
     border-radius: v.$b_radius;
     cursor: pointer;
     transition: opacity 200ms ease-out;
+
     &:hover {
-        opacity: 0.85;
+        opacity: 0.8;
     }
 }
 

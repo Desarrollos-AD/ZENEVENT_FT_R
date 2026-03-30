@@ -1,10 +1,12 @@
-function App() {
+import '../src/styles/main.scss';
+import Inicio from './pages/Inicio/Inicio';
 
+function App() {
   return (
     <>
-      <p>Hola</p>
+      <Inicio />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

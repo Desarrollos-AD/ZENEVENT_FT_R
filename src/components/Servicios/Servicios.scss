@@ -1,0 +1,65 @@
+@use "../../styles/base/variables" as v;
+@use "../../styles/abstracts/mixins" as mx;
+
+.servicios {
+    margin: 5rem 0;
+
+    &__cards {
+        @include mx.grid(1, 1rem);
+
+        @include mx.telefono-mediano {
+            @include mx.grid(2, 2rem);
+        }
+
+        @include mx.tablet-pequena {
+            @include mx.grid(3, 2rem);
+        }
+
+        &--card {
+            padding: 3rem;
+            border-radius: 0.8rem;
+            border-width: 1px;
+            border-color: rgb(255 255 255 / 0.1);
+            background-color: hsl(270 15% 12% / 0.4);
+            margin: 0 auto;
+            transition: 0.30s ease-in-out;
+            border: 1px solid rgb(43, 43, 43);
+
+            &:hover {
+                background: #892eb623;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.137);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid #b447eb75;
+            }
+        }
+
+        .card {
+            &__titulo {
+                font-family: v.$font_secundario;
+
+                h4 {
+                    font-weight: v.$black;
+                    text-align: left;
+                }
+            }
+
+            &__icono {
+                background: #b447eb3b;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.137);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 1rem;
+                height: 5rem;
+                width: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    color: #b447eb;
+                }
+            }
+        }
+    }
+}

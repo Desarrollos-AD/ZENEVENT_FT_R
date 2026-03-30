@@ -1,0 +1,109 @@
+@use '../../styles/base/variables' as v;
+
+.sobreNosotros {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    height: auto;
+    margin: 5rem 0;
+    height: 60rem;
+
+    &__img,
+    &__descripcion {
+        flex: 1;
+    }
+
+    &__descripcion {
+        h2 {
+            color: v.$primario;
+        }
+
+        &--tags {
+            .experiencia {
+
+                .texto_resaltado {
+                    color: v.$primario;
+                    font-size: 3rem;
+                    font-weight: v.$bold;
+                    font-family: v.$font_secundario;
+                }
+
+                .texto_pequeno {
+                    font-size: 1.3rem;
+                    margin: 0;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: v.$b_radius;
+            display: block;
+        }
+
+        .experiencia {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                line-height: 1;
+                font-size: 1.3rem;
+            }
+
+            .texto_resaltado {
+                color: v.$primario;
+                font-size: 4rem;
+                font-weight: v.$bold;
+                font-family: v.$font_secundario;
+                letter-spacing: 0;
+            }
+
+            height: 13rem;
+            width: 13rem;
+            position: absolute;
+            bottom: 1rem;
+            right: -1rem;
+            padding: 2rem;
+            border-radius: 8px;
+            background: #b447eb33;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.137);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid #b447eb75;
+        }
+    }
+
+    &__descripcion {
+
+        h2,
+        h3 {
+            text-align: left;
+        }
+
+        p {
+            margin-top: 3rem;
+        }
+
+        &--tags {
+            display: flex;
+            justify-content: space-between;
+
+            .texto_resaltado {
+                color: v.$primario;
+                font-size: 5rem;
+                font-weight: v.$bold;
+                font-family: v.$font_secundario;
+            }
+        }
+    }
+}

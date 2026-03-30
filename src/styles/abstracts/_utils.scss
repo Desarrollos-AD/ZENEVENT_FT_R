@@ -1,0 +1,30 @@
+@use '../base/variables' as v;
+@use '../../styles/abstracts/mixins' as mx;
+
+.contenedor {
+    margin: 0 auto;
+    width: min(90%, 130rem);
+    overflow: hidden;
+}
+
+.error {
+    color: v.$blanco;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: -3rem 0 1rem 0 !important;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.gradiente_titulo {
+    font-family: v.$font_secundario;
+    background: v.$gradiente_textos;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
