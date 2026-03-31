@@ -35,6 +35,14 @@ h4 {
     text-align: center;
 }
 
+h5 {
+    font-size: clamp(6rem, 8vw, 9rem);
+    font-weight: v.$bold;
+    line-height: 1;
+    text-align: center;
+    font-family: v.$font_secundario;
+}
+
 p {
     font-size: clamp(1.6rem, 1.7vw, 1.8rem);
     color: v.$gris;

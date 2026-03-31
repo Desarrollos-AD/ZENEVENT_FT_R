@@ -3,9 +3,9 @@
 
 @mixin btn($bg_color) {
     display: inline-block;
-    padding: 2rem 3rem;
+    padding: 1rem 2rem;
     background: $bg_color;
-    border-radius: v.$b_radius;
+    border-radius: 5rem;
     cursor: pointer;
     transition: opacity 200ms ease-out;
 

@@ -1,0 +1,24 @@
+@use "../../styles/base/variables" as v;
+@use "../../styles/abstracts/mixins" as mx;
+
+.separadorContacto {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    p{
+        margin-bottom: 5rem;
+    }
+
+    .btn {
+        box-shadow: 0px 0px 89px 0px rgb(114, 21, 221);
+        -moz-box-shadow: 0px 0px 89px 0px rgb(114, 21, 221);
+        -webkit-box-shadow: 0px 0px 89px 0px rgb(114, 21, 221);
+        margin-bottom: 5rem;
+    }
+}
