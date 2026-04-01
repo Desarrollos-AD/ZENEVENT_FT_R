@@ -17,7 +17,7 @@ function Galeria() {
         </h3>
 
         <figure>
-          <div class="galeria">
+          <div class="galeria" className="galeria">
             <div class="galeria__img galeria__img--1">
               <img src={img2} alt="Imagen galeria" loading="lazy" />
               <div className="overlay">

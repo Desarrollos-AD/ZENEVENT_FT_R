@@ -114,7 +114,7 @@ function Contacto() {
   };
 
   return (
-    <div className="contenedor">
+    <div className="contenedor" id="contacto">
       <section>
         <h2>Contacto</h2>
         <h3>

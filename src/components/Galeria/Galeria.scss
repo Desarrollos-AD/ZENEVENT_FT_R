@@ -1,9 +1,10 @@
 @use "../../styles/base/variables" as v;
 @use "../../styles/abstracts/_mixins.scss" as mx;
 
-.momentos{
+.momentos {
   margin: 5rem 0;
 }
+
 .galeria {
   @include mx.grid(4, 1rem);
   border-radius: v.$b_radius;
@@ -35,8 +36,13 @@
 
       p {
         padding: 2rem;
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: v.$blanco;
+
+        @include mx.telefono-grande {
+          font-size: 2.5rem;
+
+        }
       }
     }
 

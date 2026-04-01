@@ -21,13 +21,19 @@
 }
 
 .contenido {
-    padding: 5rem 0;
+    padding: 1rem 0;
     display: flex;
     gap: 2.5rem;
     align-items: center;
     justify-content: center;
     z-index: 200;
     position: relative;
+    flex-direction: column;
+
+    @include mx.telefono-grande{
+        flex-direction: row;
+    }
+
 
     &__right,
     &__left {

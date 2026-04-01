@@ -4,7 +4,7 @@ function Servicios() {
   return (
     <>
       <div className="contenedor">
-        <section className="servicios">
+        <section className="servicios" id="servicios">
           <h2>NUESTROS SERVICIOS</h2>
           <h3>
             Todo lo que necesitas para un evento
