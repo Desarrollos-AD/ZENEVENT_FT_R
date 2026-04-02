@@ -45,7 +45,7 @@ const formasContacto = [
   },
   {
     texto: "UBICACIÓN",
-    dato: "Av. Amparo de la torre #217",
+    dato: "Av. las Aves #3 Puente Moreno, Veracruz",
     icono: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
