@@ -45,7 +45,7 @@ const formasContacto = [
   },
   {
     texto: "UBICACIÓN",
-    dato: "Av. las Aves #3 Puente Moreno, Veracruz",
+    dato: "Calz. Simon Bolívar No. 645 No. Int 4, C. Ignacio Zaragoza, 91910 Veracruz, Ver.",
     icono: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
